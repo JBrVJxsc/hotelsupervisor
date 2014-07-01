@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F50B8D44-006A-4A4A-AB56-4B408E7BEE16}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HotelSupervisorClient</RootNamespace>
+    <AssemblyName>winhsc</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LumiSoft.Net, Version=2.0.4492.11923, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\LumiSoft.Net\Net\Net\bin\Release\LumiSoft.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\TypeOfType.cs" />
+    <Compile Include="Exceptions\RegeditKeyNotFoundException.cs" />
+    <Compile Include="Exceptions\SubKeyNotFoundException.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Interfaces\IHolder.cs" />
+    <Compile Include="Managers\CommandManager.cs" />
+    <Compile Include="Managers\CommunicationManager.cs" />
+    <Compile Include="Managers\DataBaseManager.cs" />
+    <Compile Include="Managers\EncryptionManager.cs" />
+    <Compile Include="Managers\GuidManager.cs" />
+    <Compile Include="Managers\LogManager.cs" />
+    <Compile Include="Managers\RegistryManager.cs" />
+    <Compile Include="Managers\TimeoutManager.cs" />
+    <Compile Include="Managers\XmlManager.cs" />
+    <Compile Include="Objects\Commands\BaseCommand.cs" />
+    <Compile Include="Objects\Commands\KnockCommand.cs" />
+    <Compile Include="Objects\Commands\Response.cs" />
+    <Compile Include="Objects\Commands\UpdateCommand.cs" />
+    <Compile Include="Objects\Communication\Attachment.cs" />
+    <Compile Include="Objects\Communication\CommunicationParameter.cs" />
+    <Compile Include="Objects\Communication\MessageHeader.cs" />
+    <Compile Include="Objects\Communication\MessageWhole.cs" />
+    <Compile Include="Objects\Holders\BaseResponseHolder.cs" />
+    <Compile Include="Objects\Holders\KnockResponseHolder.cs" />
+    <Compile Include="Objects\Holders\UpdateResponseHolder.cs" />
+    <Compile Include="Objects\HotelInfo.cs" />
+    <Compile Include="Objects\LocalGuest.cs" />
+    <Compile Include="Objects\Holders\LocalGuestHolder.cs" />
+    <Compile Include="Plus\FileSystemWatcherPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Plus\FileSystemWatcherPlus.Designer.cs">
+      <DependentUpon>FileSystemWatcherPlus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service.Designer.cs">
+      <DependentUpon>Service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Plus\FileSystemWatcherPlus.resx">
+      <DependentUpon>FileSystemWatcherPlus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service.resx">
+      <DependentUpon>Service.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

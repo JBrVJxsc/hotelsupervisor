@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B602DE3-DA13-49D8-943E-453072D938B5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HotelSupervisorService</RootNamespace>
+    <AssemblyName>HotelSupervisorService</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Nets.ico</ApplicationIcon>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\lib\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LumiSoft.Net, Version=2.0.4492.11923, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LumiSoft.Net\Net\Net\bin\Release\LumiSoft.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\CheckSource.cs" />
+    <Compile Include="Enums\CommandType.cs" />
+    <Compile Include="Enums\GuestType.cs" />
+    <Compile Include="Enums\LogType.cs" />
+    <Compile Include="Enums\SystemLogType.cs" />
+    <Compile Include="Enums\TypeOfType.cs" />
+    <Compile Include="Exceptions\ExceptionPlus.cs" />
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\BaseSettingObjectEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\BaseSettingObjectEditControl.Designer.cs">
+      <DependentUpon>BaseSettingObjectEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\DataBaseSettingObjectEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\DataBaseSettingObjectEditControl.Designer.cs">
+      <DependentUpon>DataBaseSettingObjectEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\CommunicationSettingObjectEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\CommunicationSettingObjectEditControl.Designer.cs">
+      <DependentUpon>CommunicationSettingObjectEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\HotelSettingObjectEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\HotelSettingObjectEditControl.Designer.cs">
+      <DependentUpon>HotelSettingObjectEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\PolicemanSettingObjectEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\PolicemanSettingObjectEditControl.Designer.cs">
+      <DependentUpon>PolicemanSettingObjectEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\SpecialSupervisedSettingObjectEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\SpecialSupervisedSettingObjectEditControl.Designer.cs">
+      <DependentUpon>SpecialSupervisedSettingObjectEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\ToolStripButtons\ToolStripButtonDeleteOne.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\ToolStripButtons\ToolStripButtonDeleteOne.Designer.cs">
+      <DependentUpon>ToolStripButtonDeleteOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\ToolStripButtons\ToolStripButtonExit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\ToolStripButtons\ToolStripButtonExit.Designer.cs">
+      <DependentUpon>ToolStripButtonExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\ToolStripButtons\ToolStripButtonNewOne.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\ToolStripButtons\ToolStripButtonNewOne.Designer.cs">
+      <DependentUpon>ToolStripButtonNewOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\ToolStripButtons\ToolStripButtonSave.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ISettingObjectEditControls\ToolStripButtons\ToolStripButtonSave.Designer.cs">
+      <DependentUpon>ToolStripButtonSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\Line.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\Line.Designer.cs">
+      <DependentUpon>Line.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\LogShowers\BaseLogShower.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\LogShowers\BaseLogShower.Designer.cs">
+      <DependentUpon>BaseLogShower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\LogShowers\GuestLogShower.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\LogShowers\GuestLogShower.Designer.cs">
+      <DependentUpon>GuestLogShower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\LogShowers\SystemLogShower.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\LogShowers\SystemLogShower.Designer.cs">
+      <DependentUpon>SystemLogShower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\Plus\ButtonPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\Plus\ButtonPlus.Designer.cs">
+      <DependentUpon>ButtonPlus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\Plus\CommandToolStripDropDownButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\Plus\CommandToolStripDropDownButton.Designer.cs">
+      <DependentUpon>CommandToolStripDropDownButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\Plus\DataGridViewPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\Plus\DataGridViewPlus.Designer.cs">
+      <DependentUpon>DataGridViewPlus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\Plus\LogListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\Plus\LogListView.Designer.cs">
+      <DependentUpon>LogListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\Plus\PanelWithColor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\Plus\PanelWithColor.Designer.cs">
+      <DependentUpon>PanelWithColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\Plus\StatusStripPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\Plus\StatusStripPlus.Designer.cs">
+      <DependentUpon>StatusStripPlus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\Plus\ToolStripButtonPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\Plus\ToolStripButtonPlus.Designer.cs">
+      <DependentUpon>ToolStripButtonPlus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\Plus\ToolTipPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\Plus\ToolTipPlus.Designer.cs">
+      <DependentUpon>ToolTipPlus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\SettingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\SettingControl.Designer.cs">
+      <DependentUpon>SettingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Forms\AlertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Forms\AlertForm.Designer.cs">
+      <DependentUpon>AlertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Forms\SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Forms\SettingForm.Designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Service.Designer.cs">
+      <DependentUpon>Service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Interfaces\ILog.cs" />
+    <Compile Include="Interfaces\ILogShower.cs" />
+    <Compile Include="Interfaces\ISettingObject.cs" />
+    <Compile Include="Interfaces\ISettingObjectEditControl.cs" />
+    <Compile Include="Managers\DataBaseManager.cs" />
+    <Compile Include="Managers\CommunicationManager.cs" />
+    <Compile Include="Managers\EncryptionManager.cs" />
+    <Compile Include="Managers\GuidManager.cs" />
+    <Compile Include="Managers\LogManager.cs" />
+    <Compile Include="Managers\ProcessManager.cs" />
+    <Compile Include="Managers\ReflectionManager.cs" />
+    <Compile Include="Managers\RegistryManager.cs" />
+    <Compile Include="Managers\SettingManager.cs" />
+    <Compile Include="Managers\SMSManager.cs" />
+    <Compile Include="Managers\SoundManager.cs" />
+    <Compile Include="Managers\SupervisorManager.cs" />
+    <Compile Include="Managers\SuspectManager.cs" />
+    <Compile Include="Managers\TimeoutManager.cs" />
+    <Compile Include="Managers\WindowManager.cs" />
+    <Compile Include="Managers\XmlManager.cs" />
+    <Compile Include="Objects\Command\BaseCommand.cs" />
+    <Compile Include="Interfaces\IFolderProcessor.cs" />
+    <Compile Include="Objects\Command\CommandInfoObject.cs" />
+    <Compile Include="Objects\Command\CommandObject.cs" />
+    <Compile Include="Objects\Command\KnockCommand.cs" />
+    <Compile Include="Objects\Command\UpdateCommand.cs" />
+    <Compile Include="Objects\Communication\Attachment.cs" />
+    <Compile Include="Objects\Communication\CommunicationParameter.cs" />
+    <Compile Include="Objects\Communication\MessageHeader.cs" />
+    <Compile Include="Objects\Communication\MessageWhole.cs" />
+    <Compile Include="Objects\Communication\MessageHandleTask.cs" />
+    <Compile Include="Objects\FolderProcessors\BaseProcessor.cs" />
+    <Compile Include="Objects\FolderProcessors\InBoxProcessor.cs" />
+    <Compile Include="Objects\FolderProcessors\KnockProcessor.cs" />
+    <Compile Include="Objects\FolderProcessors\RegisterProcessor.cs" />
+    <Compile Include="Objects\FolderProcessors\UpdateProcessor.cs" />
+    <Compile Include="Objects\Hotel.cs" />
+    <Compile Include="Objects\Guest.cs" />
+    <Compile Include="Objects\Logs\BaseLog.cs" />
+    <Compile Include="Objects\Logs\GuestLog.cs" />
+    <Compile Include="Objects\Logs\SystemLog.cs" />
+    <Compile Include="Objects\Policeman.cs" />
+    <Compile Include="Objects\Setting\DataBaseSetting.cs" />
+    <Compile Include="Objects\Setting\CommunicationSetting.cs" />
+    <Compile Include="Objects\Setting\HotelSetting.cs" />
+    <Compile Include="Objects\Setting\PolicemanSetting.cs" />
+    <Compile Include="Objects\Setting\SpecialSupervisedSetting.cs" />
+    <Compile Include="Objects\SpecialSupervised.cs" />
+    <Compile Include="Objects\Suspect.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Controls\ISettingObjectEditControls\BaseSettingObjectEditControl.resx">
+      <DependentUpon>BaseSettingObjectEditControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ISettingObjectEditControls\CommunicationSettingObjectEditControl.resx">
+      <DependentUpon>CommunicationSettingObjectEditControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ISettingObjectEditControls\DataBaseSettingObjectEditControl.resx">
+      <DependentUpon>DataBaseSettingObjectEditControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ISettingObjectEditControls\HotelSettingObjectEditControl.resx">
+      <DependentUpon>HotelSettingObjectEditControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ISettingObjectEditControls\PolicemanSettingObjectEditControl.resx">
+      <DependentUpon>PolicemanSettingObjectEditControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ISettingObjectEditControls\SpecialSupervisedSettingObjectEditControl.resx">
+      <DependentUpon>SpecialSupervisedSettingObjectEditControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ISettingObjectEditControls\ToolStripButtons\ToolStripButtonDeleteOne.resx">
+      <DependentUpon>ToolStripButtonDeleteOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ISettingObjectEditControls\ToolStripButtons\ToolStripButtonExit.resx">
+      <DependentUpon>ToolStripButtonExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ISettingObjectEditControls\ToolStripButtons\ToolStripButtonNewOne.resx">
+      <DependentUpon>ToolStripButtonNewOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ISettingObjectEditControls\ToolStripButtons\ToolStripButtonSave.resx">
+      <DependentUpon>ToolStripButtonSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\LogShowers\BaseLogShower.resx">
+      <DependentUpon>BaseLogShower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\LogShowers\GuestLogShower.resx">
+      <DependentUpon>GuestLogShower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\LogShowers\SystemLogShower.resx">
+      <DependentUpon>SystemLogShower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\Plus\ButtonPlus.resx">
+      <DependentUpon>ButtonPlus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\Plus\CommandToolStripDropDownButton.resx">
+      <DependentUpon>CommandToolStripDropDownButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\Plus\DataGridViewPlus.resx">
+      <DependentUpon>DataGridViewPlus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\Plus\LogListView.resx">
+      <DependentUpon>LogListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\Plus\StatusStripPlus.resx">
+      <DependentUpon>StatusStripPlus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\Plus\ToolStripButtonPlus.resx">
+      <DependentUpon>ToolStripButtonPlus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\SettingControl.resx">
+      <DependentUpon>SettingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Forms\AlertForm.resx">
+      <DependentUpon>AlertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Forms\SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Service.resx">
+      <DependentUpon>Service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Web References\SMSSDK\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteOne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewOne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataBase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Eye.ico" />
+    <Content Include="Nets.ico" />
+    <None Include="Resources\Alert.png" />
+    <None Include="Resources\Suspect.png" />
+    <None Include="Resources\Knock.png" />
+    <None Include="Resources\Update.png" />
+    <None Include="Resources\DateTime.png" />
+    <None Include="Resources\Query.png" />
+    <None Include="Resources\Communication.png" />
+    <None Include="Resources\Null.png" />
+    <None Include="app.config" />
+    <None Include="Resources\Exit.png" />
+    <None Include="Resources\Policeman.png" />
+    <None Include="Resources\SpecialSupervised.png" />
+    <None Include="Resources\Hotel.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\Broadcast.png" />
+    <None Include="Resources\Eye.png" />
+    <None Include="Web References\SMSSDK\mo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SMSSDK\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SMSSDK\SDKService.wsdl" />
+    <None Include="Web References\SMSSDK\SDKService.xsd" />
+    <None Include="Web References\SMSSDK\statusReport.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://sdkhttp.eucp.b2m.cn/sdk/SDKService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SMSSDK\</RelPath>
+      <UpdateFromURL>http://sdkhttp.eucp.b2m.cn/sdk/SDKService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HotelSupervisorService_SMSSDK_SDKService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

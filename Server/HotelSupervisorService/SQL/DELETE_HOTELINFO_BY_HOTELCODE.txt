@@ -1,0 +1,5 @@
+DELETE
+FROM
+HotelInfo
+WHERE
+HOTEL_CODE=?

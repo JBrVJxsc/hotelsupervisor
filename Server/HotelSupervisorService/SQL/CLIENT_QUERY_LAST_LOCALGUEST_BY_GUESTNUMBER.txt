@@ -1,0 +1,9 @@
+SELECT
+F_GuestNum,
+F_CardNum, 
+F_Name, 
+F_LoginTime, 
+F_LoginRoom
+FROM T_LocalGuest
+WHERE
+RIGHT(F_GuestNum,22) > RIGHT({0},22)

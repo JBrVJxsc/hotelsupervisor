@@ -1,0 +1,17 @@
+INSERT INTO
+Policeman
+(
+POLICEMAN_NAME,
+MOBILEPHONE,
+DUTY_TIME_BEGIN,
+DUTY_TIME_END,
+IS_ON_DUTY
+)
+VALUES
+(
+?,
+?,
+?,
+?,
+?
+)

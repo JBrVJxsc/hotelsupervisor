@@ -1,0 +1,6 @@
+SELECT TOP {0} GuestLog.LOG_TIME, GuestLog.GUEST_TYPE, 
+      GuestLog.CARD_NUMBER, GuestLog.GUEST_NAME, GuestLog.HOTEL_CODE, 
+      HotelInfo.HOTEL_NAME, GuestLog.ROOM_CODE, GuestLog.LOGIN_TIME
+FROM (GuestLog INNER JOIN
+      HotelInfo ON GuestLog.HOTEL_CODE = HotelInfo.HOTEL_CODE)
+ORDER BY GuestLog.LOG_TIME DESC

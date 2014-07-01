@@ -1,0 +1,13 @@
+INSERT INTO
+SystemLog
+(
+LOG_TIME,
+SYSTEM_LOG_TYPE,
+LOG_CONTENT
+)
+VALUES
+(
+?,
+?,
+?
+)

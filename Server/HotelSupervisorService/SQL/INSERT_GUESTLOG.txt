@@ -1,0 +1,21 @@
+INSERT INTO
+GuestLog
+(
+LOG_TIME,
+GUEST_TYPE,
+CARD_NUMBER,
+GUEST_NAME,
+HOTEL_CODE,
+ROOM_CODE,
+LOGIN_TIME
+)
+VALUES
+(
+?,
+?,
+?,
+?,
+?,
+?,
+?
+)

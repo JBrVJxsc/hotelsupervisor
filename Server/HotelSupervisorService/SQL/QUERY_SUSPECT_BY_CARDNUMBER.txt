@@ -1,0 +1,12 @@
+SELECT 
+bt2,
+bt3,
+bt7,
+bt9,
+bt11,
+bt25,
+bt26
+FROM
+ztry
+WHERE
+bt7=?

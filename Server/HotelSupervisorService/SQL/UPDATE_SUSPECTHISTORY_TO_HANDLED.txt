@@ -1,0 +1,7 @@
+UPDATE
+SuspectHistory
+SET
+HANDLED=?,
+HANDLE_TIME=?
+WHERE
+SUSPECT_ID=?

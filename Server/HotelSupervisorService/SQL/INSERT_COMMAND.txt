@@ -1,0 +1,13 @@
+INSERT INTO
+Command
+(
+COMMANDID,
+COMMANDTYPE,
+SENDTIME
+)
+VALUES
+(
+?,
+?,
+?
+)

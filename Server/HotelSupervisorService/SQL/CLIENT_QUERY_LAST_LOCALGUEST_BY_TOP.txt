@@ -1,0 +1,9 @@
+SELECT 
+TOP {0} 
+F_GuestNum,
+F_CardNum, 
+F_Name, 
+F_LoginTime, 
+F_LoginRoom
+FROM T_LocalGuest
+ORDER BY F_LoginTime DESC

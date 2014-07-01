@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CommandKnockPassword" xml:space="preserve">
+    <value>kI1Bw5E/w0gl5R9rSM19Og==</value>
+  </data>
+  <data name="CommandKnockUserName" xml:space="preserve">
+    <value>kMXfLA3nHUhgqtDsTYAIuGk38nmxaG6W</value>
+  </data>
+  <data name="CommandUpdatePassword" xml:space="preserve">
+    <value>kI1Bw5E/w0gl5R9rSM19Og==</value>
+  </data>
+  <data name="CommandUpdateUserName" xml:space="preserve">
+    <value>kMXfLA3nHUhPlJ6U7AyRpfde+/Olewn5</value>
+  </data>
+  <data name="DataBaseConnectionString" xml:space="preserve">
+    <value>nvrAE958Z64e7i4x4YVhyCQ2WPi8Ndij9jWhxJkzX5yo5e9PvbE4mq3NfgoZ0M1F+QibQf7zqP2QZO0xFnVnfySXIYuvqlC22hcusj4u+HHGsQKWMID1TZvAKpgajTUmP7lPViN8ArG77lgvMb3f/1ApFFNO8IM3yKijeVTnM7g=</value>
+  </data>
+  <data name="DataBaseFileFolder" xml:space="preserve">
+    <value>aMA2dGI+hqVJxybAhVwL5Q==</value>
+  </data>
+  <data name="DataBaseFileName" xml:space="preserve">
+    <value>pEEvYb0g9ujqLuPGQ7viIQ==</value>
+  </data>
+  <data name="DataBaseFilePassword" xml:space="preserve">
+    <value>+D6CY7ssNwELond3w7Ux5g==</value>
+  </data>
+  <data name="DataBaseFileUserName" xml:space="preserve">
+    <value>9gd/PQ6tLmo=</value>
+  </data>
+  <data name="EncryptionIV" xml:space="preserve">
+    <value>SuFjcEmp/TE=</value>
+  </data>
+  <data name="EncryptionKey" xml:space="preserve">
+    <value>KIPSToILGp6fl+3gXJvMsN4IajizYBBT</value>
+  </data>
+  <data name="LogFileLocation" xml:space="preserve">
+    <value>E65VD038zvN67Zoybvohxg==</value>
+  </data>
+  <data name="LogFileName" xml:space="preserve">
+    <value>FGAJK/BQeEqILE8BYI7dk9MOi6QjPdW7r9J9NmXWrdI=</value>
+  </data>
+  <data name="MessageDefaultFolder" xml:space="preserve">
+    <value>0eA9k1WrDAI=</value>
+  </data>
+  <data name="ReceiveMessageServer" xml:space="preserve">
+    <value>qlqeHe+3MX+rm5g5F57i2w==</value>
+  </data>
+  <data name="RegBaseLocation" xml:space="preserve">
+    <value>zWViezHOzckxuZ7mT7VwIugDfgzB0WvOIITIRKvpId93Y+2Lcph/XUqvo+/xz0qzyvuNQIF2yD064utTOyToMg==</value>
+  </data>
+  <data name="RegHotelLocation" xml:space="preserve">
+    <value>g/4eNN6cwBE=</value>
+  </data>
+  <data name="RegHotelName" xml:space="preserve">
+    <value>FYx3X1b4Bzc=</value>
+  </data>
+  <data name="RegHotelTel" xml:space="preserve">
+    <value>fK0epQk8pH8=</value>
+  </data>
+  <data name="RegPath" xml:space="preserve">
+    <value>TfnGBIG2zdo=</value>
+  </data>
+  <data name="SendMessageAccounts" xml:space="preserve">
+    <value>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</value>
+  </data>
+  <data name="SendMessageServer" xml:space="preserve">
+    <value>I5wLfSuNWihlq9uDt1h2Zg==</value>
+  </data>
+  <data name="SQL_QUERY_LAST_LOCALGUEST_BY_TOP" xml:space="preserve">
+    <value>bVMmMTGm4+mwPJQCyWG9eStIEyQ2k8DnKVFWjpVwCglwpcNJgUo2iHE2WXFXf0wu0GRoGGEhbK4nFPl5oR/mCaUBnAkpYd/0lbv4LXOsNDHAHCA9shffrLwcwisGRF61SkN4OXXzr/u9yIA1rwHEHo0vbiNbqu6J</value>
+  </data>
+  <data name="RegLastGuestNumber" xml:space="preserve">
+    <value>zUC6tcD/ZhA=</value>
+  </data>
+  <data name="SQL_QUERY_LAST_LOCALGUEST_BY_GUESTNUMBER" xml:space="preserve">
+    <value>UqQdeCNatZbY3yFv9l8Nv/MRxrFnTY0rrhPfggXH5yfozPZZ53nO8IHaUndyc/QbKWjrTyIV+2AfbsdeY/A4+21oF2rg72HZGvwtXXihBehjmr6XOrlwJe4mYQrW62wXcRI0wdm425s0SJMM5WumfcTXWZsVrXa5K4XD9ZaHuqM=</value>
+  </data>
+  <data name="RegHotelID" xml:space="preserve">
+    <value>5WXezhIMpO0=</value>
+  </data>
+  <data name="MessageNewGuestSubject" xml:space="preserve">
+    <value>eODHg7GDgOTpM8oK1SSA4Q==</value>
+  </data>
+  <data name="MessageServerLocation" xml:space="preserve">
+    <value>dEQ3ERNu2kGExp8KkVJ7j4riN7MPnbJd</value>
+  </data>
+  <data name="SendMessageServiceProvider" xml:space="preserve">
+    <value>wSsfov/coX64AicqXgjpzQ==</value>
+  </data>
+  <data name="MessageCommandKnockSubject" xml:space="preserve">
+    <value>t1usvWOcKzM=</value>
+  </data>
+  <data name="MessageCommandUpdateSubject" xml:space="preserve">
+    <value>y46+hx8AWok=</value>
+  </data>
+  <data name="UpdateFileIdentificationCode" xml:space="preserve">
+    <value>ZqxJirzCU008R9spBZ9Trw==</value>
+  </data>
+  <data name="UpdateFilePath" xml:space="preserve">
+    <value>E65VD038zvMSulKezR+KDQ==</value>
+  </data>
+  <data name="CommandKnockCheckPointRegeditKeyName" xml:space="preserve">
+    <value>K1Hej9vOV44=</value>
+  </data>
+  <data name="CommandUpdateCheckPointRegeditKeyName" xml:space="preserve">
+    <value>7Z7sbj2q4bc=</value>
+  </data>
+  <data name="MessageRegisterSubject" xml:space="preserve">
+    <value>LeXgb9AZOraFumgMILVP5A==</value>
+  </data>
+  <data name="SendRegisterMessagePassword" xml:space="preserve">
+    <value>kI1Bw5E/w0gl5R9rSM19Og==</value>
+  </data>
+  <data name="SendRegisterMessageUser" xml:space="preserve">
+    <value>kMXfLA3nHUj4bfvRSuJcxyIzm+cwwxby</value>
+  </data>
+  <data name="LocalGuestBackUpFileFullName" xml:space="preserve">
+    <value>E65VD038zvNzJ9yxh/EgilHDt4Y2AfmR</value>
+  </data>
+  <data name="CommandResponseKnockBackUpFileName" xml:space="preserve">
+    <value>E65VD038zvN8YlwzlvPZCm6fK2+wFUGg</value>
+  </data>
+  <data name="CommandResponseUpdateBackUpFileName" xml:space="preserve">
+    <value>E65VD038zvPTKfgtiobziQ+oEmZ/Z0FV</value>
+  </data>
+</root>

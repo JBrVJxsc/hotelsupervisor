@@ -1,0 +1,5 @@
+DELETE
+FROM
+Policeman
+WHERE
+MOBILEPHONE=?
